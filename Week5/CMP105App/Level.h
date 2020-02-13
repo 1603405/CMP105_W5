@@ -5,9 +5,11 @@
 #include "Framework/GameObject.h"
 #include <string>
 #include <iostream>
+#include "Zombie.h"
+#include "Mario.h"
 
 
-class Level{
+class Level {
 public:
 	Level(sf::RenderWindow* hwnd, Input* in);
 	~Level();
@@ -24,4 +26,14 @@ private:
 	// Default variables for level class.
 	sf::RenderWindow* window;
 	Input* input;
+
+	// Created actors
+	Zombie zombie1;
+	Mario mario1;
+
+	// Textures
+	sf::Texture zombTexture;
+	sf::Texture marioTexture;
+
+
 };
