@@ -6,9 +6,13 @@ class Mario : public GameObject
 {
 public:
 	Mario();
-	//	~Mario();
 
+	// Mario orientation
 	void update(float dt) override;
+	
+	// Mario movement
+	void handleInput(float dt);
+
 
 protected:
 	Animation walk;

@@ -27,6 +27,10 @@ private:
 	sf::RenderWindow* window;
 	Input* input;
 
+	//SPEEEEEEEEEEEEEEEEEEEEEEEEEEEED (speed)
+	float speedx;
+	float speedy; 
+
 	// Created actors
 	Zombie zombie1;
 	Mario mario1;
@@ -34,6 +38,4 @@ private:
 	// Textures
 	sf::Texture zombTexture;
 	sf::Texture marioTexture;
-
-
 };

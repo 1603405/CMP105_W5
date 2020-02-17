@@ -30,6 +30,29 @@ Mario::Mario()
 
 }
 
+void Mario::handleInput(float dt)
+{
+	if (input->isKeyDown(sf::Keyboard::Right))
+	{
+		move(sf::Vector2f(velocity.x, 0) * dt);
+	}
+
+	if (input->isKeyDown(sf::Keyboard::Left))
+	{
+		move(sf::Vector2f(-velocity.x, 0) * dt);
+	}
+
+	if (input->isKeyDown(sf::Keyboard::Up))
+	{
+		move(sf::Vector2f(0, -velocity.y) * dt);
+	}
+
+	if (input->isKeyDown(sf::Keyboard::Down))
+	{
+		move(sf::Vector2f(0, velocity.y) * dt);
+	}
+};
+
 void Mario::update(float dt)
 {
 	//swim.animate(dt);
@@ -38,9 +61,10 @@ void Mario::update(float dt)
 	currentAnimation->animate(dt);
 	setTextureRect(currentAnimation->getCurrentFrame());
 
+
 	if (input->isKeyDown(sf::Keyboard::Right))
 	{
-		currentAnimation = &walk; 
+		currentAnimation = &walk;
 		//currentAnimation->reset();	//Don't like this function, cannot hold down button to to action
 		setTextureRect(currentAnimation->getCurrentFrame());
 	}
@@ -57,7 +81,7 @@ void Mario::update(float dt)
 		currentAnimation->reset();		//Can be used here as you want it to be reset
 		setTextureRect(currentAnimation->getCurrentFrame());
 	}
-	else 
+	else
 	{
 		currentAnimation = &wait;
 		setTextureRect(currentAnimation->getCurrentFrame());

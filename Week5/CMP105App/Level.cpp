@@ -15,7 +15,10 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	mario1.setSize(sf::Vector2f(100, 100));
 	mario1.setPosition(200, 200);
 	mario1.setTexture(&marioTexture);
+	mario1.setVelocity(500.0, 500.0);
 	mario1.setInput(input);				//this allows input for the character
+	speedx = 500;
+	speedy = 500;
 }
 
 Level::~Level()
@@ -27,6 +30,8 @@ Level::~Level()
 void Level::handleInput(float dt)
 {
 
+	//input stuff
+	mario1.handleInput(dt);
 }
 
 // Update game objects
@@ -34,6 +39,8 @@ void Level::update(float dt)
 {
 	zombie1.update(dt);
 	mario1.update(dt);
+//	playerView.move(pl);
+
 }
 
 // Render level
