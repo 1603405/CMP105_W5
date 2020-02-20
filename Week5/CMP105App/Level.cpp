@@ -17,8 +17,12 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	mario1.setTexture(&marioTexture);
 	mario1.setVelocity(500.0, 500.0);
 	mario1.setInput(input);				//this allows input for the character
+	
 	speedx = 500;
 	speedy = 500;
+
+	view.setCenter(mario1.getPosition());
+
 }
 
 Level::~Level()
@@ -29,9 +33,14 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-
 	//input stuff
 	mario1.handleInput(dt);
+	if (input->isKeyDown(sf::Keyboard::Right))
+	{
+		view.move(1.f, 0);
+		window->setView(view);
+	}
+
 }
 
 // Update game objects

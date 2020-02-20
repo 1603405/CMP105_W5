@@ -27,16 +27,16 @@
     <ClCompile Include="Framework\GameObject.cpp">
       <Filter>Framework</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Mario.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Zombie.cpp">
+    <ClCompile Include="Mario.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Level.cpp">
+    <ClCompile Include="Zombie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Main.cpp">
+    <ClCompile Include="Level.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -58,13 +58,13 @@
     <ClInclude Include="Framework\GameObject.h">
       <Filter>Framework</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Mario.h">
+    <ClInclude Include="Level.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Zombie.h">
+    <ClInclude Include="Mario.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Level.h">
+    <ClInclude Include="Zombie.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
