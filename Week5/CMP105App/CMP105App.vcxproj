@@ -157,25 +157,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Level.cpp" />
-    <ClCompile Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Main.cpp" />
-    <ClCompile Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Mario.cpp" />
-    <ClCompile Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Zombie.cpp" />
     <ClCompile Include="Framework\Animation.cpp" />
     <ClCompile Include="Framework\Input.cpp" />
     <ClCompile Include="Framework\GameObject.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Mario.cpp" />
+    <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="DO_NOT_EDIT.txt" />
     <Text Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Level.h" />
-    <ClInclude Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Mario.h" />
-    <ClInclude Include="..\..\..\..\..\Games Programmin%27 -CMP105\Week 5\CMP105_W5\Week5\CMP105App\Zombie.h" />
     <ClInclude Include="Framework\Animation.h" />
     <ClInclude Include="Framework\Input.h" />
     <ClInclude Include="Framework\GameObject.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="Mario.h" />
+    <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

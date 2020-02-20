@@ -28,10 +28,14 @@ Mario::Mario()
 	currentAnimation = &wait;
 	setTextureRect(currentAnimation->getCurrentFrame());
 
+	view.setCenter(getPosition());
 }
+
+
 
 void Mario::handleInput(float dt)
 {
+
 	if (input->isKeyDown(sf::Keyboard::Right))
 	{
 		move(sf::Vector2f(velocity.x, 0) * dt);
@@ -51,12 +55,17 @@ void Mario::handleInput(float dt)
 	{
 		move(sf::Vector2f(0, velocity.y) * dt);
 	}
+
+
 };
 
 void Mario::update(float dt)
 {
 	//swim.animate(dt);
 	//setTextureRect(swim.getCurrentFrame());
+
+
+	view.setCenter(getPosition());
 
 	currentAnimation->animate(dt);
 	setTextureRect(currentAnimation->getCurrentFrame());

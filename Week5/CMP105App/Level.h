@@ -27,6 +27,10 @@ private:
 	sf::RenderWindow* window;
 	Input* input;
 
+	// View
+	sf::View view;				//created view object
+
+
 	//SPEEEEEEEEEEEEEEEEEEEEEEEEEEEED (speed)
 	float speedx;
 	float speedy; 
