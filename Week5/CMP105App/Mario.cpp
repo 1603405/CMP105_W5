@@ -29,6 +29,8 @@ Mario::Mario()
 	setTextureRect(currentAnimation->getCurrentFrame());
 
 	view.setCenter(getPosition());
+
+
 }
 
 
