@@ -64,8 +64,7 @@ void Mario::update(float dt)
 	//swim.animate(dt);
 	//setTextureRect(swim.getCurrentFrame());
 
-
-	view.setCenter(getPosition());
+	//
 
 	currentAnimation->animate(dt);
 	setTextureRect(currentAnimation->getCurrentFrame());
