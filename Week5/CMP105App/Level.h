@@ -39,6 +39,10 @@ private:
 	Zombie zombie1;
 	Mario mario1;
 
+	// Hitbox
+	sf::RectangleShape marioHitBox;
+
+
 	// Textures
 	sf::Texture zombTexture;
 	sf::Texture marioTexture;

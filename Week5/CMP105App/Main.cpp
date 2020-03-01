@@ -7,8 +7,10 @@
 #include <iostream>
 #include "Level.h"
 
+
 void windowProcess(sf::RenderWindow* window, Input* in)
 {
+	
 	// Handle window events.
 	sf::Event event;
 	while (window->pollEvent(event))

@@ -234,7 +234,12 @@ public:
     /// \param states   Render states to use for drawing
     ///
     ////////////////////////////////////////////////////////////
-    void draw(const Drawable& drawable, const RenderStates& states = RenderStates::Default);
+    
+	// Hitbox Shite
+	void draw(float, float, float, float);
+	
+	
+	void draw(const Drawable& drawable, const RenderStates& states = RenderStates::Default);
 
     ////////////////////////////////////////////////////////////
     /// \brief Draw primitives defined by an array of vertices
@@ -256,6 +261,8 @@ public:
     ///
     ////////////////////////////////////////////////////////////
     void draw(const VertexBuffer& vertexBuffer, const RenderStates& states = RenderStates::Default);
+
+;
 
     ////////////////////////////////////////////////////////////
     /// \brief Draw primitives defined by a vertex buffer
