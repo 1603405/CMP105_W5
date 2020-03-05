@@ -31,6 +31,13 @@ Mario::Mario()
 	view.setCenter(getPosition());
 
 
+	// Mario hitbox
+	hitBox.setPosition(0, 0);
+	hitBox.setSize(sf::Vector2f(100, 100));
+	hitBox.setFillColor(sf::Color::Transparent);
+	hitBox.setOutlineColor(sf::Color::Green);
+	hitBox.setOutlineThickness(5.00);
+
 }
 
 
@@ -59,14 +66,13 @@ void Mario::handleInput(float dt)
 	}
 
 
-};
+}
 
 void Mario::update(float dt)
 {
 	//swim.animate(dt);
 	//setTextureRect(swim.getCurrentFrame());
 
-	//
 
 	currentAnimation->animate(dt);
 	setTextureRect(currentAnimation->getCurrentFrame());
@@ -96,4 +102,13 @@ void Mario::update(float dt)
 		currentAnimation = &wait;
 		setTextureRect(currentAnimation->getCurrentFrame());
 	}
+}
+
+void Mario::draw(sf::RenderWindow* window)
+{
+	window->draw(*this);		//dereferencing this pointer (please revise this week 4 software)
+	//the calling instance of this function (object) will be called *this
+	window->draw(hitBox);		
+
+
 }

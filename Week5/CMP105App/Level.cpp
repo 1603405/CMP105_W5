@@ -20,9 +20,7 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	
 	view.setCenter(mario1.getPosition());
 	
-	// Mario hitbox
-	marioHitBox.setPosition(mario1.getPosition());
-	marioHitBox.setSize(sf::Vector2f(100, 100));
+
 
 }
 
@@ -37,20 +35,22 @@ void Level::handleInput(float dt)
 	
 	window->setView(view);
 
-	// When actor (mario) moves the camera moves
-	view.setCenter(mario1.getPosition());
+
 
 	mario1.handleInput(dt);
 
-	marioHitBox.setPosition(mario1.getPosition());
+	//hitBox.setPosition(mario1.getPosition());
 
 }
 
 // Update game objects
 void Level::update(float dt)
 {
+
 	zombie1.update(dt);
 	mario1.update(dt);
+	// When actor (mario) moves the camera moves
+	view.setCenter(mario1.getPosition());
 
 //	playerView.move(pl);
 
@@ -60,9 +60,8 @@ void Level::update(float dt)
 void Level::render()
 {
 	beginDraw();
-	window->draw(marioHitBox);
 	window->draw(zombie1);
-	window->draw(mario1);
+	mario1.draw(window);
 	endDraw();
 }
 

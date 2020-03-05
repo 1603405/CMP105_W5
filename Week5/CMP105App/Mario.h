@@ -5,8 +5,11 @@
 
 class Mario : public GameObject
 {
+
+
 public:
 	Mario();
+	void draw(sf::RenderWindow* window);
 
 	// Mario orientation
 	void update(float dt) override;
@@ -20,10 +23,14 @@ public:
 	// View
 	sf::View view;				//created view object
 
+
 protected:
 	Animation walk;
 	Animation swim;
 	Animation duck;
 	Animation wait;
 	Animation* currentAnimation;
+
+	// Hitbox
+	sf::RectangleShape hitBox;
 };
