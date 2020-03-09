@@ -50,7 +50,7 @@ void Level::update(float dt)
 	zombie1.update(dt);
 	mario1.update(dt);
 	// When actor (mario) moves the camera moves
-	view.setCenter(mario1.getPosition());
+	view.setCenter(mario1.getPosition());		
 
 //	playerView.move(pl);
 
@@ -61,7 +61,8 @@ void Level::render()
 {
 	beginDraw();
 	window->draw(zombie1);
-	mario1.draw(window);
+	window->draw(mario1);
+	//mario1.draw(window);		Look at later please
 	endDraw();
 }
 
